@@ -1,0 +1,34 @@
+<div id="<%= dom_id user_profile %>">
+  <p>
+    <strong>Prénom:</strong>
+    <%= user_profile.first_name %>
+  </p>
+
+  <p>
+    <strong>Nom de Famille:</strong>
+    <%= user_profile.last_name %>
+  </p>
+
+  <p>
+    <strong>Date de naissance:</strong>
+    <%= user_profile.last_name %>
+  </p>  
+
+  <p>
+    <strong>Adresse:</strong>
+    <%= user_profile.full_address %>
+  </p>  
+
+  <p>
+    <strong>Email:</strong>
+    <%= user_profile.user.email %>
+  </p>
+
+  <p>
+    <strong>Avatar:</strong>
+    <% if user_profile.avatar.persisted? %>
+      <div><%= image_tag user_profile.avatar %></div>
+    <% end %>
+  </p>
+
+</div>
